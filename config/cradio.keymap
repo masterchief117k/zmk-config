@@ -5,9 +5,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// Home row mods macro (Left and Right hand preserved)
+// Home row mods macro (Left hand preserved)
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1   &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
     behaviors {
@@ -59,7 +58,7 @@
             &kp Q      &kp W      &kp E      &none      &kp T          &none      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │ DEAD (J) │  K       │  L       │ ' "      │
-            HRML(A,    S,         D,         F)         &kp G          &kp H      &none      HRMR(K,    L,         SQT,       NONE)
+            HRML(A,    S,         D,         F)         &kp G          &kp H      &none      &ht RCTRL K &ht RALT L &ht RSHFT SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DEAD (Z) │  X       │ DEAD (C) │  V       │ DEAD (B) │   │  N       │  M       │ , <      │ DEAD (.) │ /?      │
             &none      &kp X      &none      &kp V      &none          &kp N      &kp M      &kp COMMA  &none      &kp FSLH
