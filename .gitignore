@@ -1,2 +1,5 @@
 
 .zmk/
+
+# Editor swap files
+*.swp
